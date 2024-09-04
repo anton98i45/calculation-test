@@ -31,10 +31,4 @@ docker-compose up
 
 You can now access the Django application in your web browser at:
 
-http://localhost:8000/swagger/
-
-If you want to use admin site, you should create superuser
-
-```shell
-docker exec -it django_app /venv/bin/python manage.py createsuperuser
-```
+http://localhost:8000/calculate/
