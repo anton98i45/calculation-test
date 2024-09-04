@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        INSTALL_DEV: "true"
+    shm_size: "1gb"
+    container_name: calculator_app
+    command: [ "./runserver.sh" ]
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    stdin_open: true
+    tty: true
+
+networks:
+  mynetwork:

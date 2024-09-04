@@ -1,0 +1,15 @@
+<!-- calculation_log_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculation Logs</title>
+</head>
+<body>
+    <h1>Calculation Logs</h1>
+    <ul>
+        {% for log in logs %}
+            <li>{{ log.created_at }}: {{ log.expression }} = {{ log.result }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

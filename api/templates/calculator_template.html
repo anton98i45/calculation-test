@@ -1,0 +1,23 @@
+<!-- calculate.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculation Form</title>
+</head>
+<body>
+    <h1>Calculation Form</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if result is not None %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+
+    {% if error %}
+        <h2 style="color: red;">{{ error }}</h2>
+    {% endif %}
+</body>
+</html>
